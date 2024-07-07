@@ -7,6 +7,8 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - "5173:5173"
+    env_file:
+      - './frontend/.env'  
 
   backend:
     build:
@@ -41,13 +43,11 @@ services:
   nginx:
     image: nginx:latest
     ports:
-      - "8082:80"
+      - "80:80"
     depends_on:
       - frontend
       - backend
 
-  
-  
   proxy:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
