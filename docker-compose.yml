@@ -9,6 +9,8 @@ services:
       - "5173:5173"
     env_file:
       - './frontend/.env'  
+    depends_on:
+      - backend
 
   backend:
     build:
