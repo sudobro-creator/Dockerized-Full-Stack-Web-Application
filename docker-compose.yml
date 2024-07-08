@@ -25,8 +25,8 @@ services:
     image: postgres:latest
     environment:
       POSTGRES_DB: hng11_stage2
-      POSTGRES_USER: Lanky
-      POSTGRES_PASSWORD: Dongnaan13
+      POSTGRES_USER: Sudobro
+      POSTGRES_PASSWORD: Sudobro
     ports:
       - '5432:5432'
     volumes:
@@ -43,11 +43,9 @@ services:
   nginx:
     build: 
       context: ./nginx
-      #dockerfile: ./Dockerfile 
+      dockerfile: ./Dockerfile 
     ports:
       - "80:80"
-#      - "81:81"
-  #    - "443:443"
     depends_on:
       - frontend
       - backend
@@ -57,7 +55,6 @@ services:
     restart: always
     ports:
       - '8090:81'
-   #   - '80:80'
       - '443:443'
     volumes:
       - ./proxy/data:/data
