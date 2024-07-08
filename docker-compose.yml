@@ -26,7 +26,7 @@ services:
     environment:
       POSTGRES_DB: hng_devops2
       POSTGRES_USER: sudobro
-      POSTGRES_PASSWORD: pass123
+      POSTGRES_PASSWORD: pass123456
     ports:
       - '5432:5432'
     volumes:
