@@ -1,4 +1,4 @@
-# Full-Stack FastAPI and React APP
+# Dockerized Full-Stack FastAPI and React APP
 <h3>HNG-Stage-Two</h3>
 Welcome to the Full-Stack FastAPI and React template repository. This repository serves as a demo application for interns, showcasing how to set up and run a full-stack application with a FastAPI backend and a ReactJS frontend using ChakraUI.
 
